@@ -92,11 +92,11 @@ with t1:
         transaction_data= pd.read_json(transaction_url)
         
         data= transaction_data; x='DATE'; y=['Number of Swaps','Number of Swappers'];  tit= 'Weekly Swaps Transactions and Users' 
-        xtit='Date'; ytit = 'Transaction Number' ; w=700; h=450 ; logy = True ; a=col1
+        xtit='Date'; ytit = 'Transaction Number' ; w=550; h=450 ; logy = True ; a=col1
         line_plot(data,x,y,a,tit,xtit,ytit,w,h,logy)
         
         data= transaction_data; x='DATE'; y='Volume of Swaps'; 
-        a=col2; tit= 'Weekly Swaps Volume'; xtit='Date'; ytit = 'Volume' ; w=700; h=450 ; 
+        a=col2; tit= 'Weekly Swaps Volume'; xtit='Date'; ytit = 'Volume' ; w=550; h=450 ; 
         logy = True  ; color=None;barmode='relative'   
         bar_plot(data,x,y,a,tit,xtit,ytit,w,h,logy,color,barmode)
 
@@ -105,7 +105,7 @@ with t2:
         transaction_url="https://node-api.flipsidecrypto.com/api/v2/queries/7bb5d8e5-df88-4ffd-ba21-dbab327c7344/data/latest"
         transaction_data= pd.read_json(transaction_url)
         data= transaction_data; x='DATE'; y='Volume of Swaps'; 
-        a=st; tit= 'Weekly Swaps Transactions per Platform'; xtit='Date'; ytit = 'Number of Swaps' ; w=1400; h=450 ; 
+        a=st; tit= 'Weekly Swaps Transactions per Platform'; xtit='Date'; ytit = 'Number of Swaps' ; w=1100; h=450 ; 
         logy = True  ; color='PLATFORM'; barmode='relative'   
         bar_plot(data,x,y,a,tit,xtit,ytit,w,h,logy,color,barmode)
          
@@ -114,7 +114,7 @@ with t3:
         transaction_url="https://node-api.flipsidecrypto.com/api/v2/queries/7bb5d8e5-df88-4ffd-ba21-dbab327c7344/data/latest"
         transaction_data= pd.read_json(transaction_url)
         data= transaction_data; x='DATE'; y='Number of Swappers'; 
-        a=st; tit= 'Weekly Swaps Users per Platform'; xtit='Date'; ytit = 'Number of Users' ; w=1400; h=450 ; 
+        a=st; tit= 'Weekly Swaps Users per Platform'; xtit='Date'; ytit = 'Number of Users' ; w=1100; h=450 ; 
         logy = True  ; color='PLATFORM'; barmode='relative'   
         bar_plot(data,x,y,a,tit,xtit,ytit,w,h,logy,color,barmode)
 
@@ -122,7 +122,7 @@ with t4:
         transaction_url="https://node-api.flipsidecrypto.com/api/v2/queries/7bb5d8e5-df88-4ffd-ba21-dbab327c7344/data/latest"
         transaction_data= pd.read_json(transaction_url)
         data= transaction_data; x='DATE'; y='Volume of Swaps'; 
-        a=st; tit= 'Weekly Swap Volume per Platform'; xtit='Date'; ytit = '	Volume of Swaps' ; w=1400; h=450 ; 
+        a=st; tit= 'Weekly Swap Volume per Platform'; xtit='Date'; ytit = '	Volume of Swaps' ; w=1100; h=450 ; 
         logy = True  ; color='PLATFORM'; barmode='relative'   
         bar_plot(data,x,y,a,tit,xtit,ytit,w,h,logy,color,barmode)
 
@@ -130,6 +130,6 @@ with t5:
         transaction_url="https://node-api.flipsidecrypto.com/api/v2/queries/cd4968b9-2a7a-4543-a26b-7a9eb2d511f9/data/latest"
         transaction_data= pd.read_json(transaction_url)
         data= transaction_data; x='PLATFORM'; y='Number of Swaps'; 
-        a=st; tit= 'Top 10 Platforms by Swap Transactions'; xtit=''; ytit = '	Number of Swaps' ; w=1400; h=500 ; 
+        a=st; tit= 'Top 10 Platforms by Swap Transactions'; xtit=''; ytit = '	Number of Swaps' ; w=1100; h=500 ; 
         logy = False  ; color='PLATFORM'; barmode='relative'   
         bar_plot(data,x,y,a,tit,xtit,ytit,w,h,logy,color,barmode)    
