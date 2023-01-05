@@ -108,11 +108,11 @@ with t2:
         transaction_data= pd.read_json(transaction_url)
         
         data= transaction_data; x='DATE'; y=['Sales Count','Cumulative Sales Count'];  tit= 'Weekly Number of NFT Sales' 
-        xtit='Date'; ytit = 'Sales Count' ; w=700; h=450 ; logy = True ; a=col1
+        xtit='Date'; ytit = 'Sales Count' ; w=550; h=450 ; logy = True ; a=col1
         line_plot(data,x,y,a,tit,xtit,ytit,w,h,logy) 
         
         data= transaction_data; x='DATE'; y=['Volume','Cumulative Volume'];  tit= 'Weekly Volume of NFT Sales' 
-        xtit='Date'; ytit = 'Volume' ; w=700; h=450 ; logy = True ; a=col2
+        xtit='Date'; ytit = 'Volume' ; w=550; h=450 ; logy = True ; a=col2
         line_plot(data,x,y,a,tit,xtit,ytit,w,h,logy) 
    
 with t3:
@@ -120,7 +120,7 @@ with t3:
         time_url="https://node-api.flipsidecrypto.com/api/v2/queries/1ce61183-7c95-4461-a2fd-89fdb117788f/data/latest"
         time_data= pd.read_json(time_url)
         data= time_data; x='DATE'; y=['Buyers','Sellers']; 
-        a=st; tit= 'Weekly Number of NFT Buyers and Sellers'; xtit='Date'; ytit = '' ; w=700; h=450 ; 
+        a=st; tit= 'Weekly Number of NFT Buyers and Sellers'; xtit='Date'; ytit = 'Users' ; w=550; h=450 ; 
         logy = False  ; color=None ;barmode='group'   
         bar_plot(data,x,y,a,tit,xtit,ytit,w,h,logy,color,barmode)         
         
