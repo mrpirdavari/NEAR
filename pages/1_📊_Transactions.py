@@ -112,12 +112,12 @@ with t2:
         transaction_data= pd.read_json(transaction_url)
         
         data= transaction_data; x='DATE'; y='NEAR USD Price';  tit= 'NEAR Price USD' 
-        xtit='Date'; ytit = 'Price USD' ; w=1400; h=450 ; logy = False ; a=st
+        xtit='Date'; ytit = 'Price USD' ; w=1100; h=450 ; logy = False ; a=st
         line_plot(data,x,y,a,tit,xtit,ytit,w,h,logy)
        
 
         # data= transaction_data; x='DATE'; y=['FEES','TPS']; a=col2; 
-        # tit= 'Weekly Luna Fees'; xtit='Date'; ytit = 'FEES & TPS' ; w=700; h=450 ; logy = True 
+        # tit= 'Weekly Luna Fees'; xtit='Date'; ytit = 'FEES & TPS' ; w=550; h=450 ; logy = True 
         # fig=scatter_plot(data,x,y,a,tit,xtit,ytit,w,h,logy)    
       
     
@@ -127,11 +127,11 @@ with t3:
         col1, col2= st.columns(2) 
 
         data= transaction_data; x='DATE'; y=['Number of Transactions','Cumulative Number of Transactions'];  tit= 'Number of Transactions per Week' 
-        xtit='Date'; ytit = '' ; w=700; h=450 ; logy = True ; a=col1
+        xtit='Date'; ytit = '' ; w=550; h=450 ; logy = True ; a=col1
         line_plot(data,x,y,a,tit,xtit,ytit,w,h,logy)
         
         data= transaction_data; x='DATE'; y=['Transaction Fees','Cumulative Transaction Fees'];  tit= 'Amount of Transaction Fees per Week' 
-        xtit='Date'; ytit = 'Transaction Fees' ; w=700; h=450 ; logy = True ; a=col2
+        xtit='Date'; ytit = 'Transaction Fees' ; w=550; h=450 ; logy = True ; a=col2
         line_plot(data,x,y,a,tit,xtit,ytit,w,h,logy) 
         
 with t4:
@@ -140,11 +140,11 @@ with t4:
         transaction_data= pd.read_json(transaction_url)
         
         data= transaction_data; x='DATE'; y=['Number of Transactions','TPS'];  tit= 'Number of Transactions and TPS' 
-        xtit='Date'; ytit = 'Number of Transactions' ; w=700; h=450 ; logy = True ; a=col1
+        xtit='Date'; ytit = 'Number of Transactions' ; w=550; h=450 ; logy = True ; a=col1
         line_plot(data,x,y,a,tit,xtit,ytit,w,h,logy) 
         
         data= transaction_data; x='DATE'; y='Number of Blocks';  tit= 'Number of Blocks per Week' 
-        xtit='Date'; ytit = 'Number of Blocks' ; w=700; h=450 ; logy = True ; a=col2
+        xtit='Date'; ytit = 'Number of Blocks' ; w=550; h=450 ; logy = True ; a=col2
         line_plot(data,x,y,a,tit,xtit,ytit,w,h,logy) 
 
 with t5:  
@@ -152,7 +152,7 @@ with t5:
         time_url="https://node-api.flipsidecrypto.com/api/v2/queries/39345768-0040-4bd5-b234-ffcdec5d3826/data/latest"
         transaction_data= pd.read_json(time_url)  
         data= transaction_data; x='DATE'; y='Average Block Time';  tit= 'Average Block Time per Week' 
-        xtit='Date'; ytit = 'Average Block Time' ; w=1000; h=450 ; logy = False ; a=col1
+        xtit='Date'; ytit = 'Average Block Time' ; w= 700; h=450 ; logy = False ; a=col1
         line_plot(data,x,y,a,tit,xtit,ytit,w,h,logy) 
         
         col3.text(" ")
@@ -181,11 +181,11 @@ with t7:
         time_data= pd.read_json(time_url)
         data= time_data; x='DATE'; y=['Failed Transactions','Succeeded Transactions']; 
         a=col1; tit= 'Weekly Ratio of Failed and Succeeded Transactions'; xtit='Date'; ytit = 'Ratio %' ;
-        w=700; h=450 ; logy = False  ; color=None ; barmode='relative'   
+        w=550; h=450 ; logy = False  ; color=None ; barmode='relative'   
         bar_plot2(data,x,y,a,tit,xtit,ytit,w,h,logy,color,barmode)  
         
         data= time_data; x='DATE'; y=['Failed Transactions','Succeeded Transactions']; 
-        a=col2; tit= 'Weekly Number of Failed and Succeeded Transactions'; xtit='Date'; ytit = 'Transaction numbers' ; w=700; h=450 ; logy = False  ; color=None ;barmode='group'   
+        a=col2; tit= 'Weekly Number of Failed and Succeeded Transactions'; xtit='Date'; ytit = 'Transaction numbers' ; w=550; h=450 ; logy = False  ; color=None ;barmode='group'   
         bar_plot(data,x,y,a,tit,xtit,ytit,w,h,logy,color,barmode) 
         
 with t8:
@@ -193,7 +193,7 @@ with t8:
         time_url="https://node-api.flipsidecrypto.com/api/v2/queries/94b61780-6323-42c4-b3a0-5c3dd4f2157a/data/latest"
         transaction_data= pd.read_json(time_url)  
         data= transaction_data; x='DATE'; y='Success Rate';  tit= 'Weekly Success Rate' 
-        xtit='Date'; ytit = 'Ratio %' ; w=1400; h=450 ; logy = False ; a=st
+        xtit='Date'; ytit = 'Ratio %' ; w=1100; h=450 ; logy = False ; a=st
         line_plot(data,x,y,a,tit,xtit,ytit,w,h,logy) 
         
 
