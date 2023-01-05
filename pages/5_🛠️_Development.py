@@ -102,7 +102,7 @@ with t2:
 
         data= transaction_data; x='DATE'; y=['Number of New Contracts','Cumultive Number of New Contracts'];
         tit= 'Weekly Deployed Contracts' 
-        xtit='Date'; ytit = 'Number of New Contracts' ; w=700; h=450 ; logy = True ; a=col1
+        xtit='Date'; ytit = 'Number of New Contracts' ; w=550; h=450 ; logy = True ; a=col1
         line_plot(data,x,y,a,tit,xtit,ytit,w,h,logy) 
         
         
