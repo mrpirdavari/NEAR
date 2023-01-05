@@ -93,13 +93,13 @@ with t1:
         total_url="https://node-api.flipsidecrypto.com/api/v2/queries/7012becc-f865-4cb3-a5f7-eafbe82f0c12/data/latest"
         total_data= pd.read_json(total_url)
         data= total_data; x='ACTION'; y=['Total Number of Transations','Total Number of Users','Total Volume of Transctions']; 
-        a=col1; tit= 'Total Staking/Unstaking Statistics'; xtit='Action'; ytit = 'Statistics' ; w=700; h=450 ; logy = True  ; color=None ;barmode='group'   
+        a=col1; tit= 'Total Staking/Unstaking Statistics'; xtit='Action'; ytit = 'Statistics' ; w=550; h=450 ; logy = True  ; color=None ;barmode='group'   
         bar_plot(data,x,y,a,tit,xtit,ytit,w,h,logy,color,barmode) 
         
         total_url="https://node-api.flipsidecrypto.com/api/v2/queries/75aa1652-6fe2-48ca-9239-f6ee943d998a/data/latest"
         total_data= pd.read_json(total_url)
         data= total_data; x='ACTION'; y=['Average Number of Transations','Average Number of Users','Average Volume of Transctions']; 
-        a=col2; tit= 'Average Staking/Unstaking Statistics'; xtit='Action'; ytit = 'Statistics' ; w=700; h=450 ; logy = True  ; color=None ;barmode='group'   
+        a=col2; tit= 'Average Staking/Unstaking Statistics'; xtit='Action'; ytit = 'Statistics' ; w=550; h=450 ; logy = True  ; color=None ;barmode='group'   
         bar_plot(data,x,y,a,tit,xtit,ytit,w,h,logy,color,barmode) 
 
 with t2:
@@ -108,7 +108,7 @@ with t2:
         time_url="https://node-api.flipsidecrypto.com/api/v2/queries/d3999b43-dc3b-48c7-90c3-4a1375e8420f/data/latest"
         time_data= pd.read_json(time_url)
         data= time_data; x='DATE'; y='Number of Transations'; 
-        a=col1; tit= 'Weekly Number of Staking/Unstaking Actions'; xtit='Date'; ytit = 'Transaction Number' ; w=700; h=450 ; 
+        a=col1; tit= 'Weekly Number of Staking/Unstaking Actions'; xtit='Date'; ytit = 'Transaction Number' ; w=550; h=450 ; 
         logy = False  ; color='ACTION' ;barmode='group'   
         bar_plot(data,x,y,a,tit,xtit,ytit,w,h,logy,color,barmode) 
 
@@ -123,7 +123,7 @@ with t3:
         col1, col2= st.columns(2)
        
         data= time_data; x='DATE'; y='Volume of Transctions'; 
-        a=col1; tit= 'Weekly Volume of Staking/Unstaking Actions'; xtit='Date'; ytit = 'Volume' ; w=700; h=450 ; 
+        a=col1; tit= 'Weekly Volume of Staking/Unstaking Actions'; xtit='Date'; ytit = 'Volume' ; w=550; h=450 ; 
         logy = False  ; color='ACTION' ;barmode='group'   
         bar_plot(data,x,y,a,tit,xtit,ytit,w,h,logy,color,barmode) 
 
@@ -135,7 +135,7 @@ with t3:
 with t4:
         col1, col2= st.columns(2)
         data= time_data; x='DATE'; y='Number of Users'; 
-        a=col1; tit= 'Weekly Number of Staking/Unstaking Users'; xtit='Date'; ytit = 'User Number' ; w=700; h=450 ; 
+        a=col1; tit= 'Weekly Number of Staking/Unstaking Users'; xtit='Date'; ytit = 'User Number' ; w=550; h=450 ; 
         logy = False  ; color='ACTION' ;barmode='group'   
         bar_plot(data,x,y,a,tit,xtit,ytit,w,h,logy,color,barmode) 
 
@@ -150,14 +150,14 @@ with t5:
         time_url="https://node-api.flipsidecrypto.com/api/v2/queries/1b1622ce-b723-4fd7-8b5c-96b786f817c1/data/latest"
         time_data= pd.read_json(time_url)
         data= time_data; x='DATE'; y='Number of Active Validators'; 
-        a=col1; tit= 'Weekly Number of Active Validators'; xtit='Date'; ytit = 'Number of Validators' ; w=700; h=500 ; 
+        a=col1; tit= 'Weekly Number of Active Validators'; xtit='Date'; ytit = 'Number of Validators' ; w=550; h=500 ; 
         logy = False  ; color=None ;barmode='relative'   
         bar_plot(data,x,y,a,tit,xtit,ytit,w,h,logy,color,barmode)
         
         time_url="https://node-api.flipsidecrypto.com/api/v2/queries/b3a2b392-ed32-4b59-99e6-ee9e3923d0b5/data/latest"
         time_data= pd.read_json(time_url)
         data= time_data; x='WEEKS'; y='POWER_SHARE'; 
-        a=col2; tit= 'Normalised Power Distribution of NEAR Validators Over Time'; xtit='Weeks'; ytit = 'POWER SHARE %' ; w=700; h=500 ; 
+        a=col2; tit= 'Normalised Power Distribution of NEAR Validators Over Time'; xtit='Weeks'; ytit = 'POWER SHARE %' ; w=550; h=500 ; 
         logy = False  ; color='RANKS' ;barmode='relative'   
         bar_plot2(data,x,y,a,tit,xtit,ytit,w,h,logy,color,barmode)
         
@@ -168,14 +168,14 @@ with t6:
         time_url="https://node-api.flipsidecrypto.com/api/v2/queries/063e4a4a-92e9-48f8-9326-947ce4550144/data/latest"
         time_data= pd.read_json(time_url)
         data= time_data; x='USER'; y='Staking Transctions'; 
-        a=col1; tit= 'Top NEAR Stakers by Transactions'; xtit=''; ytit = 'Transaction Number' ; w=700; h=700 ; 
+        a=col1; tit= 'Top NEAR Stakers by Transactions'; xtit=''; ytit = 'Transaction Number' ; w=550; h=700 ; 
         logy = False  ; color='Staking Transctions' ;barmode='relative'   
         bar_plot(data,x,y,a,tit,xtit,ytit,w,h,logy,color,barmode)
         
         time_url="https://node-api.flipsidecrypto.com/api/v2/queries/d81026fb-e819-4990-8c63-9d1b809b1a66/data/latest"
         time_data= pd.read_json(time_url)
         data= time_data; x='USER'; y='Staking Volume'; 
-        a=col2; tit= 'Top NEAR Stakers by Volume'; xtit=''; ytit = 'Staking Volume' ; w=700; h=700 ; 
+        a=col2; tit= 'Top NEAR Stakers by Volume'; xtit=''; ytit = 'Staking Volume' ; w=550; h=700 ; 
         logy = False  ; color='Staking Volume' ;barmode='relative'   
         bar_plot(data,x,y,a,tit,xtit,ytit,w,h,logy,color,barmode) 
                
