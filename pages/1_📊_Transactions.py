@@ -152,7 +152,7 @@ with t5:
         time_url="https://node-api.flipsidecrypto.com/api/v2/queries/39345768-0040-4bd5-b234-ffcdec5d3826/data/latest"
         transaction_data= pd.read_json(time_url)  
         data= transaction_data; x='DATE'; y='Average Block Time';  tit= 'Average Block Time per Week' 
-        xtit='Date'; ytit = 'Average Block Time' ; w= 700; h=450 ; logy = False ; a=col1
+        xtit='Date'; ytit = 'Average Block Time' ; w= 550; h=450 ; logy = False ; a=col1
         line_plot(data,x,y,a,tit,xtit,ytit,w,h,logy) 
         
         col3.text(" ")
