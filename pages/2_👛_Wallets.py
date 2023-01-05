@@ -83,34 +83,6 @@ t1 = st.container()
 t2 = st.container()
 t3 = st.container()
 t4 = st.container()
-t5 = st.container()
-t6 = st.container()
-t7 = st.container()
-t8 = st.container()
-t9 = st.container()
-t10 = st.container()
-t11 = st.container()
-t12 = st.container()
-t13 = st.container()
-t14 = st.container()
-t15 = st.container()
-t16 = st.container()
-t17 = st.container()
-t18 = st.container()
-t19 = st.container()
-t20 = st.container()
-t21 = st.container()
-t22 = st.container()
-t23 = st.container()
-t24 = st.container()
-t25 = st.container()
-t26 = st.container()
-t27 = st.container()
-t28 = st.container()
-t29 = st.container()
-t30 = st.container()
-t31 = st.container()
-t32 = st.container()
 
 
 with t1:
@@ -134,7 +106,7 @@ with t2:
         transaction_data= pd.read_json(transaction_url)
         
         data= transaction_data; x='DATE'; y=['Number of Users','Cumulative Number of Users'];  tit= 'Number of Users per Week' 
-        xtit='Date'; ytit = 'Number of Users' ; w=700; h=450 ; logy = True ; a=col1
+        xtit='Date'; ytit = 'Number of Users' ; w=550; h=450 ; logy = True ; a=col1
         line_plot(data,x,y,a,tit,xtit,ytit,w,h,logy)   
 
     
@@ -142,7 +114,7 @@ with t2:
         transaction_data= pd.read_json(transaction_url)
         
         data= transaction_data; x='MINDATE'; y=['New Users','Total Users'];  tit= 'Weekly New and Cumulative Users' 
-        xtit='Date'; ytit = 'Users' ; w=700; h=450 ; logy = True ; a=col2
+        xtit='Date'; ytit = 'Users' ; w=550; h=450 ; logy = True ; a=col2
         line_plot(data,x,y,a,tit,xtit,ytit,w,h,logy) 
               
 
@@ -152,13 +124,13 @@ with t3:
         time_url="https://node-api.flipsidecrypto.com/api/v2/queries/abc3ba62-0f12-432b-a1ba-b99dd40d1686/data/latest"
         time_data= pd.read_json(time_url)
         data= time_data; x='DATES'; y='Number of Users'; 
-        a=col1; tit= 'Weekly Distribution of NEAR Holders by NEAR Balance'; xtit='Date'; ytit = 'Number of Users' ; w=700; h=500 ; 
+        a=col1; tit= 'Weekly Distribution of NEAR Holders by NEAR Balance'; xtit='Date'; ytit = 'Number of Users' ; w=550; h=500 ; 
         logy = False  ; color='Balance Type' ;barmode='relative'   
         bar_plot(data,x,y,a,tit,xtit,ytit,w,h,logy,color,barmode)
         
         
         data= time_data; x='DATES'; y='Number of Users'; 
-        a=col2; tit= 'Weekly Normalized Distribution of NEAR Holders by NEAR Balance'; xtit='Date'; ytit = 'percent of Users' ; w=700; h=500 ; 
+        a=col2; tit= 'Weekly Normalized Distribution of NEAR Holders by NEAR Balance'; xtit='Date'; ytit = 'percent of Users' ; w=550; h=500 ; 
         logy = False  ; color='Balance Type' ;barmode='relative'  
         bar_plot2(data,x,y,a,tit,xtit,ytit,w,h,logy,color,barmode)
         
