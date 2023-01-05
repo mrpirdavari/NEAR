@@ -110,13 +110,13 @@ with t2:
         transaction_data= pd.read_json(transaction_url)
         
         data= transaction_data; x='DATE'; y=['Number of Transactions','Cumulative Number of Transactions'];  tit= 'Weekly Number of Transactions on Contracts' 
-        xtit='Date'; ytit = 'Transaction Number' ; w=700; h=450 ; logy = True ; a=col2
+        xtit='Date'; ytit = 'Transaction Number' ; w=550; h=450 ; logy = True ; a=col2
         line_plot(data,x,y,a,tit,xtit,ytit,w,h,logy) 
 with t3: 
         transaction_url="https://node-api.flipsidecrypto.com/api/v2/queries/0401617a-fbd0-4ddf-b820-bb06f591e51e/data/latest"
         transaction_data= pd.read_json(transaction_url) 
         data= transaction_data; x='DATE'; y=['Number of Users','Cumulative Number of Users'];  tit= 'Weekly Number of Users on Contracts' 
-        xtit='Date'; ytit = 'Number of Users' ; w=700; h=450 ; logy = True ; a=st
+        xtit='Date'; ytit = 'Number of Users' ; w=550; h=450 ; logy = True ; a=st
         line_plot(data,x,y,a,tit,xtit,ytit,w,h,logy)         
 
 with t4:
@@ -129,6 +129,6 @@ with t4:
         col1.plotly_chart(fig8)
         
         data= transaction_data; x='DATE'; y='Number of Transactions'; 
-        a=col2; tit= 'Weekly NEAR Interactions om Top 10 Contract'; xtit='Date'; ytit = '' ; w=700; h=450 ; 
+        a=col2; tit= 'Weekly NEAR Interactions om Top 10 Contract'; xtit='Date'; ytit = '' ; w=550; h=450 ; 
         logy = False  ; color='Contract ID' ;barmode='relative'   
         bar_plot(data,x,y,a,tit,xtit,ytit,w,h,logy,color,barmode)
